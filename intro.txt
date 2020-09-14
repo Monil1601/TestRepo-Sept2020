@@ -6,4 +6,5 @@ Address: 1300 Heartwood Dr,
          NJ 08003
 Phone number: 6094109998
 
+Birth date: 01/16/1998
 
