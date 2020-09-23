@@ -1,4 +1,8 @@
+import org.junit.Test;
+
 import java.util.Scanner;
+
+import static org.junit.Assert.assertTrue;
 
 public class Palindrome {
 
@@ -18,6 +22,12 @@ public class Palindrome {
         return true;
     }
 
+    @Test
+    public void PalindromeTest() {
+        assertTrue(check("radar"));
+    }
+
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a String");

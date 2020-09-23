@@ -1,16 +1,27 @@
+import org.junit.Test;
+
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class LastLetterCount {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int counter = 0;
-        int word_s = 0;
-        int word_y = 0;
-        int count_s = 0, count_y = 0;
-        System.out.println("Enter a String");
-        String input = sc.nextLine();
+import static org.junit.Assert.assertNotNull;
 
+public class LastLetterCount {
+
+    static String input;
+    int counter = 0;
+    int word_s = 0;
+    int word_y = 0;
+    int count_s = 0, count_y = 0;
+
+    public void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a String");
+        input = sc.nextLine();
+        manipulate(input);
+    }
+
+    public Object manipulate(String line) {
         //Counting number of words
         for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == ' ')
@@ -61,5 +72,11 @@ public class LastLetterCount {
             }
             System.out.println();
         }
+        return word_s;
+    }
+
+    @Test
+    public void test() {
+        assertNotNull(manipulate(input));
     }
 }
